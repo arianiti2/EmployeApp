@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Employee List Styles */
+.employee-list {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.employee-list h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Action Buttons Styles */
+.actions button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-left: 5px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: #0056b3;
+}
+
+.updatebtn {
+  background-color: #647383;
+}
+
+.updatebtn:hover {
+  background-color: #007bff;
+}
+
+.deletebtn {
+  background-color: rgb(176, 62, 62);
+}
+
+.deletebtn:hover {
+  background-color: red;
+}
+
+/* Add or Update Form Styles */
+.employee-form {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.employee-form h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button[type="button"] {
+  background-color: #dc3545;
+}
+
+button[type="button"]:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .employee-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .form-buttons button {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+}

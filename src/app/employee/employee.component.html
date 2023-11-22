@@ -1,0 +1,31 @@
+<!-- employee.component.html -->
+<div>
+  <h2>Employee List</h2>
+  <ul>
+    <li *ngFor="let employee of employees$ | async">
+      {{ employee.name }} ({{ employee.position }}) - {{ employee.email }} - {{ employee.address }}
+      <button (click)="updateEmployee(employee)" class="updatebtn">Update</button>
+      <button (click)="deleteEmployee(employee.id)" class="deletebtn">Delete</button>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h2>{{ selectedEmployee ? 'Update Employee' : 'Add New Employee' }}</h2>
+  <form [formGroup]="newEmployeeForm" (ngSubmit)="addOrUpdateEmployee($event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name" required>
+
+    <label for="position">Position:</label>
+    <input type="text" id="position" formControlName="position" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" required>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" formControlName="address" required>
+
+    <button type="submit">{{ selectedEmployee ? 'Update Employee' : 'Add Employee' }}</button>
+    <button type="button" (click)="resetForm()">Cancel</button>
+  </form>
+</div>
