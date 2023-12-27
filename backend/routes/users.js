@@ -63,34 +63,6 @@ router.put('/:id', async (req, res) => {
   res.send(user)
 })
 
-// router.post('/login', async (req, res) => {
-//   const user = await User.findOne({ email: req.body.email })
-//   const secret = process.env.secret
-
-//   if (!user) {
-//     return res.status(400).send('The user not found')
-//   }
-
-//   if (user && bcrypt.compareSync(req.body.password, user.passwordHash)) {
-//     if (user.isAdmin) {
-//       // Only generate a token if the user has isAdmin set to true
-//       const token = jwt.sign(
-//         {
-//           userId: user.id,
-//           isAdmin: user.isAdmin,
-//         },
-//         secret,
-//         { expiresIn: '1d' }
-//       )
-
-//       res.status(200).send({ user: user.email, token: token })
-//     } else {
-//       res.status(403).send('Access Forbidden. User is not an admin.')
-//     }
-//   } else {
-//     res.status(400).send('Password is wrong!')
-//   }
-// })
 
 router.post('/register', async (req, res) => {
   let user = new User({
